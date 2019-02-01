@@ -27,6 +27,7 @@ angular_brake = 8.0
 
 [node name="UI" type="Control" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -48,6 +49,7 @@ __meta__ = {
 
 [node name="Control" type="CenterContainer" parent="UI" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
