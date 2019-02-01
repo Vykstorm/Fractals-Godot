@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://shaders/mandelbrot.shader" type="Shader" id=1]
+[ext_resource path="res://images/palette.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Mandelbrot.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 1 )
+shader_param/scale = null
+shader_param/rotation = null
+shader_param/shear = null
+shader_param/divergence_limit = null
+shader_param/convergence_iter_limit = null
+shader_param/center = null
+shader_param/branch_factor = null
+shader_param/palette_index = null
+shader_param/hue = null
+shader_param/saturation = null
+shader_param/brightness_factor = null
+shader_param/alpha = null
+shader_param/palette = ExtResource( 2 )
+_sections_unfolded = [ "Resource", "shader_param" ]
+
+[node name="Mandelbrot" type="Node2D" index="0"]
+
+material = SubResource( 1 )
+position = Vector2( 512, 300 )
+scale = Vector2( 16, 16 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Z Index" ]
+fractal_rotation = 0.0
+fractal_shear = 0
+fractal_color = Color( 1, 0, 0, 1 )
+fractal_brightness = 1.0
+branch_factor = 4
+divergence_limit = 50
+convergence_iter_limit = 20
+palette_index = 0
+center = Vector2( 0, 0 )
+size = Vector2( 125, 125 )
+zoom_level = 0
+max_zoom_speed = 0.75
+zoom_acceleration = 0.35
+zoom_brake = 0.75
+zoom_action = 0
+max_move_speed = 0.08
+move_acceleration = 0.25
+move_brake = 0.15
+move_direction = Vector2( 0, 0 )
+spin = false
+max_angular_speed = 45.0
+angular_acceleration = 50.0
+angular_brake = 60.0
+controls_enabled = true
+
+
